@@ -2,8 +2,12 @@
 
 Tu mets ici ton **markdown**.
 
+## Question 1
+
 *Et là tes questions*
 <div class="quizz" id="questions"></div>
+
+## Question 2
 
 Et tu continues avec un autre fichier de questions
 
