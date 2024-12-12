@@ -10,36 +10,6 @@ body {
     display: flex;
 }
 
-/* Conteneur du TOC */
-#toc {
-    position: fixed; /* Fixe le TOC à gauche de l'écran */
-    top: 20px; /* Légère marge en haut */
-    left: 20px; /* Marge à gauche */
-    width: 200px; /* Largeur fixe du TOC */
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    z-index: 10; /* Assure que le TOC soit au-dessus du contenu */
-    max-height: 100vh;
-    overflow-y: auto; /* Permet de faire défiler le TOC si le contenu est trop long */
-}
-
-#toc li {
-    margin-bottom: 10px;
-}
-
-#toc li a {
-    font-size: 16px;
-    font-weight: 500;
-    color: #3f51b5;
-    text-decoration: none;
-}
-
-#toc li a:hover {
-    text-decoration: underline;
-}
-
 /* Conteneur principal */
 #content {
     width: 80%;
@@ -51,13 +21,21 @@ body {
     margin-left: 280px; /* Ajoute une marge à gauche pour le TOC */
 }
 
-h1, h2 {
+h1 {
     color: #3f51b5;
-    font-size: 28px;
+    font-size: 48px;
 }
 
 h2 {
     margin-top: 40px;
+    color: #3f51b5;
+    font-size: 20px;
+}
+
+h3 {
+    margin-top: 40px;
+    color: #3f51b5;
+    font-size: 20px;
 }
 
 a {
@@ -137,4 +115,83 @@ button {
 
 button:hover {
     background-color: #283593;
+}
+
+/* Conteneur du TOC */
+#toc {
+    position: fixed; /* Fixe le TOC à gauche de l'écran */
+    top: 20px; /* Légère marge en haut */
+    left: 20px; /* Marge à gauche */
+    width: 200px; /* Largeur fixe du TOC */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 10; /* Assure que le TOC soit au-dessus du contenu */
+    max-height: 100vh;
+    overflow-y: auto; /* Permet de faire défiler le TOC si le contenu est trop long */
+    font-size: 16px;
+    list-style-type: none;
+}
+
+#toc li {
+    margin: 10px 0;
+    position: relative;
+}
+
+#toc li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #3f51b5;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 5px 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toc li a:hover {
+    text-decoration: underline;
+    background-color: #007bff;
+    color: #fff;
+}
+
+#toc ul {
+    list-style-type: none;
+    /* padding-left: 20px; */
+    /* display: none; */
+    transition: all 0.3s ease;
+}
+
+#toc li:hover > ul {
+    display: block;
+}
+
+#toc > li > a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#toc li li > a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#toc li {
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+#toc li:nth-child(even) {
+    transition-delay: 0.1s;
+}
+
+#toc li:nth-child(odd) {
+    transition-delay: 0.2s;
+}
+
+#toc li.show {
+    transform: translateY(0);
 }

@@ -20,16 +20,25 @@
                 heading({ tokens, depth }) {
                     const text = this.parser.parseInline(tokens);
                     const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
-                    const toc = document.getElementById('toc');
                     const div = document.createElement('li');
                     const a = document.createElement('a');
                     a.href = `#marked-${escapedText}`;
                     a.innerText = text;
                     div.append(a);
-                    toc.append(div);
-                    return `<h${depth} id=marked-${escapedText}>${text}`+ 
-                    // `<a href=#toc>(toc)</a>` +
-                    `</h${depth}>`;
+                    if (depth === 1) {
+                        toc.append(div);
+                    } else {
+                        let currentList = toc;
+                        for (let i = 1; i < depth; i++) {
+                            if (!currentList.lastChild || !currentList.lastChild.querySelector('ul')) {
+                                let subList = document.createElement('ul');
+                                currentList.lastChild.appendChild(subList);
+                            }
+                            currentList = currentList.lastChild.querySelector('ul');
+                        }
+                        currentList.appendChild(div);
+                    }
+                    return `<h${depth} id="marked-${escapedText}">${text}</h${depth}>`;
                 }
             };
             marked.use({
@@ -37,10 +46,10 @@
                 gfm: true,
                 breaks: false,
                 renderer,
-                });
+            });
             document.getElementById('content').innerHTML = marked.parse(markdownContent);
             generateQuizz();
         });
-      </script>
+    </script>
 </body>
 </html>
