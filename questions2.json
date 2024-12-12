@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Combien font 2 + 2?",
+        "type": "valeur",
+        "correct_answer": "4",
+        "correct_message": "Bonne réponse !",
+        "incorrect_message": "Désolé, 2 et 2 font 4."
+    }
+]

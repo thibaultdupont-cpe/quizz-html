@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Le soleil se lève à l'est.",
+        "type": "vrai/faux",
+        "correct_answer": "vrai",
+        "correct_message": "Bonne réponse ! Le soleil se lève effectivement à l'est.",
+        "incorrect_message": "Désolé, ce n'est pas correct. Le soleil se lève à l'est."
+    },
+    {
+        "question": "Quel est le résultat de 5 + 7 ?",
+        "type": "valeur",
+        "correct_answer": "12",
+        "correct_message": "Exact ! 5 + 7 = 12.",
+        "incorrect_message": "Non, la réponse correcte est 12."
+    },
+    {
+        "question": "La Terre est plate.",
+        "type": "vrai/faux",
+        "correct_answer": "faux",
+        "correct_message": "Correct, la Terre est ronde.",
+        "incorrect_message": "Non, la Terre n'est pas plate."
+    }
+]
