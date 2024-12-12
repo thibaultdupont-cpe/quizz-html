@@ -55,6 +55,7 @@ function generateQuizz() {
                     feedbackCell.colSpan = 2;
                     feedbackCell.id = `feedback-${id}-${index}`;
                     feedbackCell.className = 'feedback';
+                    feedbackCell.style.display = 'none';
                     feedbackRow.appendChild(feedbackCell);
                     tbody.appendChild(feedbackRow);
                 });
@@ -82,7 +83,7 @@ function validateAll(questions, id) {
 
         const feedbackCell = document.getElementById(`feedback-${id}-${index}`);
         feedbackCell.textContent = '';
-
+        feedbackCell.style.display  = '';
         if (userAnswer.toLowerCase() === q.correct_answer.toLowerCase()) {
             feedbackCell.textContent = q.correct_message;
             feedbackCell.style.color = 'green';
