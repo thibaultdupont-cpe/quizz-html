@@ -4,13 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Évaluation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; }
-        th { background-color: #f4f4f4; text-align: left; }
-        .feedback { margin-top: 10px; font-weight: bold; }
-        input[type='text'], input[type='radio'] { margin-right: 10px; }
+        /* Style général de la page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Conteneur principal */
+        #content {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #3f51b5;
+            font-size: 28px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        a {
+            color: #3f51b5;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tableaux stylisés */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3f51b5;
+            color: white;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+
+        td input[type="text"] {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        /* Stylisation des groupes de boutons radio */
+        td div {
+            display: flex;
+            align-items: center;
+            gap: 10px;  /* Espacement entre les boutons radio et leurs labels */
+        }
+
+        td input[type="radio"] {
+            margin: 0;  /* Enlever la marge par défaut autour des boutons radio */
+        }
+
+        td label {
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .feedback {
+            font-weight: bold;
+            color: #28a745;
+            padding-top: 10px;
+        }
+
+        /* Style des boutons */
+        button {
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #283593;
+        }
+
+        /* Design de la table des contenus (TOC) */
+        #toc {
+            padding: 0;
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        #toc li {
+            margin-bottom: 10px;
+        }
+
+        #toc li a {
+            font-size: 16px;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
